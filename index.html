@@ -1,302 +1,362 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Portfolio Page Template</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link href="bootstrap-icons.css" rel="stylesheet" type="text/css">
-    <link href="mr-dafoe-display.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-   <!--Navbar-->
-<header>
-  <div class="container-fluid">
-    <nav class="navbar bg-light fixed-top navbar-collapse justify-content-between">
-      <h1 class="navbar-brand mx-auto ml-lg-5 pl-lg-5" style="font-size:1.5rem;font-family: 'Mr Dafoe', cursive;"><i class="bi bi-instagram lg" style="padding-right:5px;"></i>FotoFeed</h1>
-      <ul class="nav nav-pills mx-auto mr-lg-5 pr-lg-5">
-        <li class="nav-item">
-          <button class="btn btn-success" data-toggle="modal" data-target="#newPostModal">Create a new post</button>
-        </li>
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-gear-fill"  ></i></a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Log out</a> </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<!--<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#"><i class="bi bi-instagram"></i>  Instagram</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-    <ul class="navbar-nav mr-auto">
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-	  <button type="button" class="btn btn-success">Create a new post</button>
-<div class="dropdown show"> <a class="btn btn-lg dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-gear-fill"></i>&nbsp;test
-  </a>
-  <div class="dropdown-menu">
-          <h6 class="dropdown-header">Dropdown header 1</h6>
-          <a class="dropdown-item" href="#">First Link</a> <a class="dropdown-item disabled" href="#" >Disabled Link</a> <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Seperated Link</a> </div>
-  </div>
-    </form>
-  </div>
-</nav>-->
-<div id="homeTimeline" class="c614 homeAreas">
-<div class="filterArea d-flex justify-content-center text-center">
-  <div class="filterBar">
-    <div id="viewSelect" style="font-size: 110%;"> <i id="listView" class="bi bi-square-fill" aria-hidden="true"></i>&nbsp; <i id="gridView" class="bi bi-grid-3x3-gap-fill" aria-hidden="true">&nbsp;</i> </div>
-  </div>
-  <!-- Filter Bar --> 
-</div>
-<!-- Filter Area --> 
-<script>
-				/* Filtering for Media */
-				$(function () {
-					
-					
-					$('#gridView').click(function(){
-					    $('.postArea').removeClass("listView");
-					    $('.postArea').addClass("gridView");
-					    $('#listView').removeClass("active");
-					    $('#gridView').addClass("active");
-					});
-					$('#listView').click(function(){
-					    $('.postArea').removeClass("gridView");
-					    $('.postArea').addClass("listView");
-					    $('#gridView').removeClass("active");
-					    $('#listView').addClass("active");
-					});
-					
-					    $('#postAreaAutoScrollStoreItems').hide();
-					    $('#postArea').show();
 
-					});
-					
-				});
-					
-		</script>
-<div id="postArea" class="postArea listView">
-  <div class="jscroll-inner">
-    <div class="jscroll-added">
-      <div class="mbsc-card-header" style="display: flex; flex-direction: row; justify-content: space-between; text-center; col-xl-10;">
-        <div class="mbsc-card-title">
-          <h5>POST TITLE HERE</h5>
-        </div>
-        <div class="mbsc-card-subtitle">
-          <h6> October 23, 2021, 11:33 am</h6>
-        </div>
-      </div>
-      <!-- mbsc-card-header --> 
-      
-      <!--			    			            /// MEDIA
---> 
-      
-      <img src="C:\Users\Xmods\OneDrive\Image1.jpg" alt="image"> </div>
-  </div>
-  <div class="mbsc-card-content"> </div>
-  <!-- fr-view --> 
-</div>
-<!-- post-text-content -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="images/IMAGE1.jpg" width="inherit" height="auto" alt=""/>
-          <div class="card-body" aria-hidden="true" display="hide">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-        </div>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,500;1,500&family=Mr+Dafoe&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ea5f72c905.js" crossorigin="anonymous"></script>
+
+  <style>
+    .view-group {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .thumbnail {
+      margin-bottom: 30px;
+      padding: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+    }
+
+    .item.list-group-item {
+      float: none;
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 30px;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 1rem;
+      border: 0;
+    }
+
+    .item.list-group-item .img-event {
+      float: left;
+      width: 30%;
+    }
+
+    .item.list-group-item .list-group-image {
+      margin-right: 10px;
+    }
+
+    .item.list-group-item .thumbnail {
+      margin-bottom: 0px;
+      display: inline-block;
+    }
+
+    .item.list-group-item .caption {
+      float: left;
+      width: 70%;
+      margin: 0;
+    }
+
+    .item.list-group-item:before,
+    .item.list-group-item:after {
+      display: table;
+      content: " ";
+    }
+
+    .item.list-group-item:after {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar bg-light bg-gradient text-dark fixed-top justify-content-between shadow bg-body rounded p-0 align-middle">
+    <h1 class="navbar-brand mx-auto align-middle m-0 mt-2" style="font-size:2rem;font-family: 'Mr Dafoe', cursive;"><i
+        class="bi bi-instagram lg" style="padding-right:5px;"></i>FotoFeed</h1>
+        <ul class="nav nav-pills mx-auto align-middle">
+          <div class="nav-item">
+            <button type="button" class="btn btn-success bg-gradient text-white" data-bs-toggle="modal" data-bs-target="#CreateNewPostModal">
+             <strong>Create a new post</strong></button>
+          </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline bg-gradient text-dark dropdown-toggle align-middle" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+              <i class="bi bi-gear-fill" style="font-size: 1.2rem; align-middle;"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+<!-- Modal -->
+<div class="modal fade" id="CreateNewPostModal" tabindex="-1" aria-labelledby="Create New Post" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>
+        <br>
+        <div>
+          <button type="button" class="btn btn-outline-dark bg-dark bg-opacity-25"><i class="bi bi-camera-fill"></i></button> &nbsp;
+          <button type="button" class="btn btn-outline-dark bg-dark bg-opacity-25"><i class="bi bi-geo-alt-fill"></i></button>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small> </div>
-          </div>
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Publish</button>
       </div>
     </div>
   </div>
 </div>
-	</div>
-	
-	<!--New Post Modal-->
-        <div class="modal fade" id="newPostModal" tabindex="-1" role="dialog" aria-labelledby="writePost" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1"></label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                        </form>
-                        <div>
-                            <button type="button" class="btn btn-outline-dark"><i class="bi bi-camera-fill"></i></button>
-                            <button type="button" class="btn btn-outline-dark"><i class="bi bi-geo-alt-fill"></i></button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success">Publish</button>
-                    </div>
-                </div>
-            </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#list').click(function (event) { event.preventDefault(); 
+      $('#products .item').addClass('list-group-item'); 
+    });
+      $('#grid').click(function (event) { event.preventDefault(); 
+      $('#products .item').removeClass('list-group-item'); 
+      $('#products .item').addClass('grid-group-item'); });
+    });
+  </script>
+  <div class="bg-secondary mx-auto bg-gradient bg-opacity-50">
+  <div class="container-fluid mx-auto pt-5 mt-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-center p-2">
+          <div class="btn-group mx-auto  bg-light rounded bg-gradient" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check btn-light bg-gradient" name="grid" id="grid" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="grid"><i class="bi bi-grid-3x3"></i></label>
+          
+            <input type="radio" class="btn-check btn-light bg-gradient" name="list" id="list" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="list"><i class="bi bi-square-fill"></i></label>
+          </div>
         </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap-5.1.3-dist/js/jquery-3.4.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-5.1.3-dist/js/popper.min.js"></script>
-    <script src="js/bootstrap-4.4.1.js"></script>
-  </body>
+      </div>
+    </div>
+    <div id="products" class="row view-group">
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded box-shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4m3eyx98myu0Ap-b9PgMGtai1R99mbryUQUHUzxsKCrVz0VtJYd78gGRU16kuABRt2hdvEJn5jmYz9HluBoPxCfh0mSgPISPlEYjfvHkeoDymDjxkO5aW-t2_jTB3Lcd9zoZqN_BLaI9TEB3UicTQcgZ5NWM51_vP50GCvTz7B9IeyQ7wTEwnXDeQ-BX77mwT-?width=2000&height=2000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4mntsfn2BfVBSoKVS-md57vO9E6-nNOMU82TLDo9PN8Qq1MKcQ08UxUvputUNULumUKPHvuTfZe0vDXxwnQuB4X4kN51SHkEh1bQ-VGaNI98LtiqwuuAdxTgS6gC1HStNw7BT_vU1QQQxEea1T4ubVYBNDfRUgEuNL6YUVcSq-42A8-IRAG_4inEMzMyKRehsw?width=1000&height=1000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4m9hGkQAgMDUFvJYQPMsEjJqxHFQ4z3ajvU0iTuhN1Mn70J3GMSU1Sjujvxom8tNQlXYqX-gazu8rV684nx_qJTFdz4jQxnkN3GZs6wjmZwXApCvTEoGklF6x7GzALLHovdAQyhX_TlV2HIq2m42oDtNM9j8u3hII7dSWmkYuGjGTcxvQBr8qVOkIklh45r-nP?width=1000&height=1000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4mwO_63sttnlN6Bs3SG7DD624QAjEjoG3n8K061sq_NvScunOoxMNImHRg3UVP2UY9jVfTsGXyo8CBtx40y4HksFuHUJkf9yGJkcHarK6XNHrJRUO7iXftfUJDtsnnuVezVgGTjZj1IbCv01eYt6eQoaxCQAs7IoaTWjS-ge7jAV-VUrOJUTWko2asbIZeZF9t?width=1000&height=1000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4moHqXiMDwwQxdeKxDD8tFgETiDJVpBuOWDC_Tsy5-BMbuo9QyR7myEISDCWwnzQdgC8OE8P2cNAgyI9d88WN1cWYTPZG5TIHPHuubgFTjzGAPLulKfnaVUHSD-CD7QdRkDK0GZwKW51MZ2bV5FT3dx_5MRriePpUdzb7ZQm7ujbs4ds2B1DB0OzcDjPYDN3e5?width=303&height=303&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4m3eyx98myu0Ap-b9PgMGtai1R99mbryUQUHUzxsKCrVz0VtJYd78gGRU16kuABRt2hdvEJn5jmYz9HluBoPxCfh0mSgPISPlEYjfvHkeoDymDjxkO5aW-t2_jTB3Lcd9zoZqN_BLaI9TEB3UicTQcgZ5NWM51_vP50GCvTz7B9IeyQ7wTEwnXDeQ-BX77mwT-?width=2000&height=2000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item col-xs-4 col-lg-4">
+        <div class="postborder d-block  mx-auto bg-dark rounded">
+          <div class="post bg-dark mx-3 rounded shadow">
+            <div class="post-header bg-light d-flex justify-content-between align-items-center">
+              <div class="UserInfo d-flex justify-content-around align-items-center p-2"> <i class="fab fa-html5 fa-2x p-2" aria-hidden="true"></i>
+                <div class="Username">
+                  <div class="user mx-0 p-0">
+                    <h6><strong>HTML5</strong><br></h6>
+                      <h6 class="text-muted">Welluschteev</h6>
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-ellipsis-v fa-2x p-3" aria-hidden="true"></i></div>
+            <div class="ImageContent"> <img src="https://bl6pap003files.storage.live.com/y4m3eyx98myu0Ap-b9PgMGtai1R99mbryUQUHUzxsKCrVz0VtJYd78gGRU16kuABRt2hdvEJn5jmYz9HluBoPxCfh0mSgPISPlEYjfvHkeoDymDjxkO5aW-t2_jTB3Lcd9zoZqN_BLaI9TEB3UicTQcgZ5NWM51_vP50GCvTz7B9IeyQ7wTEwnXDeQ-BX77mwT-?width=2000&height=2000&cropmode=none" class="ImageContent img-fluid  mx-auto d-block" alt=""></div>
+            <div class="Caption bg-light">
+              <div class="Socialicons p-2 d-flex justify-content-between align-items-center">
+                <div class="Leftside d-flex justify-content-start"><i class="far fa-heart fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-comment fa-2x" aria-hidden="true"></i>&nbsp;<i class="far fa-paper-plane fa-2x" aria-hidden="true"></i></div>
+                <div class="Rightside d-flex justify-content-end"><i class="far fa-bookmark fa-2x" aria-hidden="true"></i></div>
+              </div>
+              <div class="subtitle">
+                <p class="p-3">Liked by <strong>4GeeksAcademy, HTML5, Web,</strong> and <strong>100,000 others</strong></p>
+                <p class="p-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim felis, lacinia et leo vel, eleifend dictum velit. Sed auctor at tellus et sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum metus eu neque convallis, vitae commodo felis laoreet. Nunc lacinia pulvinar mi, at congue felis faucibus at. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+
 </html>
